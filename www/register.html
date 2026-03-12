@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>注册 - CppWebServer</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; background: #0f1117; color: #e2e8f0;
+         display: flex; align-items: center; justify-content: center;
+         min-height: 100vh; }
+  .card { background: #1e293b; border: 1px solid #334155; border-radius: 16px;
+          padding: 40px; width: 100%; max-width: 400px; }
+  h1 { font-size: 1.6rem; margin-bottom: 8px; }
+  p  { color: #94a3b8; margin-bottom: 28px; font-size: .9rem; }
+  label { display: block; color: #94a3b8; font-size: .85rem;
+          margin-bottom: 6px; margin-top: 18px; }
+  input { width: 100%; padding: 10px 14px; background: #0f1117;
+          border: 1px solid #334155; border-radius: 8px;
+          color: #e2e8f0; font-size: 1rem; outline: none; }
+  input:focus { border-color: #38bdf8; }
+  .btn { display: block; width: 100%; padding: 12px; margin-top: 28px;
+         background: linear-gradient(90deg,#818cf8,#38bdf8);
+         color: #0f1117; font-size: 1rem; font-weight: 700;
+         border: none; border-radius: 8px; cursor: pointer; }
+  .btn:hover { opacity: .85; }
+  .link { text-align: center; margin-top: 18px; font-size: .88rem; color: #94a3b8; }
+  .link a { color: #38bdf8; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>创建账户</h1>
+  <p>注册一个新账号</p>
+  <form method="POST" action="/register.html">
+    <label for="username">用户名</label>
+    <input id="username" name="username" type="text"
+           placeholder="输入用户名" autocomplete="username" required>
+    <label for="password">密码</label>
+    <input id="password" name="password" type="password"
+           placeholder="输入密码" autocomplete="new-password" required>
+    <button class="btn" type="submit">注 册</button>
+  </form>
+  <div class="link">已有账号？<a href="/login.html">立即登录</a></div>
+</div>
+</body>
+</html>
